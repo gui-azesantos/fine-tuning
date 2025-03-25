@@ -13,7 +13,7 @@ Este projeto realiza o fine-tuning do modelo DistilGPT-2 para gerar descrições
 
 ```
 .
-├── trn.json                 # Dataset de treinamento (JSON)
+├── trn.json                 # Dataset de treinamento (JSON) [Download](https://drive.google.com/file/d/1-hXUXKPRjd020mizL3YPil-FXvxovTwR/view?usp=drive_link)
 ├── fine_tuning.py           # Script principal
 ├── README.md                # Documentação do projeto
 ├── results/                 # Pasta onde os modelos treinados serão salvos
@@ -35,8 +35,14 @@ O dataset JSON deve conter campos `title` e `content`:
 
 ```json
 [
-  {"title": "Smartphone Android S23", "content": "Celular com câmera de 50MP e 256GB de armazenamento."},
-  {"title": "Fone de Ouvido Bluetooth", "content": "Fone sem fio com cancelamento de ruído e bateria de longa duração."}
+  {
+    "title": "Smartphone Android S23",
+    "content": "Celular com câmera de 50MP e 256GB de armazenamento."
+  },
+  {
+    "title": "Fone de Ouvido Bluetooth",
+    "content": "Fone sem fio com cancelamento de ruído e bateria de longa duração."
+  }
 ]
 ```
 
@@ -80,7 +86,6 @@ descricao = gerar_descricao("Smartphone Android S23")
 print(descricao)
 ```
 
-
 ## 📊 Resultados e Melhorias
 
 ✅ Modelo gera descrições coerentes e relevantes para os produtos.
@@ -90,3 +95,7 @@ print(descricao)
 - Treinar com um dataset maior para melhor generalização.
 - Usar modelos mais robustos (ex: GPT-3, Mistral).
 - Ajustar hiperparâmetros para melhor performance.
+
+## 📜 Licença
+
+Este projeto está sob a licença MIT.
